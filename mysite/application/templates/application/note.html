@@ -1,0 +1,10 @@
+{% extends "application/wrapper.html" %}
+
+{% block content %}
+
+    <h2 class="text-info">{{notes.title}}</h2>
+    <h3 class="text-info">{{notes.date}}</h3>
+    <p>Text of the note: <br></p>
+    <p>{{notes.text}}</p>
+
+{% endblock %}
