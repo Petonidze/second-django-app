@@ -7,7 +7,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from .models import application_user, notes
-from .forms import UserCreateForm, UserUpdateForm, UserDeleteForm, NoteDeleteForm, NoteCreateForm, NoteUpdateForm, RegisterUserForm
+from .forms import  UserUpdateForm, UserDeleteForm, NoteDeleteForm, NoteCreateForm, NoteUpdateForm, RegisterUserForm
 
 # Create your views here.
 
@@ -99,6 +99,11 @@ class RegisterUser(CreateView):
     model = application_user
     form_class = RegisterUserForm
     template_name = "application/user_register.html"
+    def form_valid(self, form):
+        
+        form.save()
+        return redirect("/")
+        
     def success_url(self):
         return redirect("/")
 

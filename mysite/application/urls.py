@@ -2,7 +2,7 @@ from django.urls import re_path, include
 from . import views
 from django.views.generic import ListView, DetailView
 from .models import application_user, notes
-from .views import UserCreate, UserUpdate, UserDelete, NoteCreate, NoteUpdate, NoteDelete, RegisterUser
+from .views import  UserUpdate, UserDelete, NoteCreate, NoteUpdate, NoteDelete, RegisterUser
 
 urlpatterns= [
 
