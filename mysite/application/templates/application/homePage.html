@@ -4,21 +4,25 @@
 
 <div class="container-fluid" >   
     <div class="row">
-        <div class="col-sm-4" style="background-color:lavender;">
+        <div class="col-sm-2" style="background-color:lavender;">
             <h1>Users</h1>
             <hr>
-            {% for user in users%}
+            {% for user in application_user %}
                 <h3>{{user.biography}}<br></h3>
             {% endfor %}
         </div>
-        
-        <div class="col-sm-8" style="background-color:lavenderblush;">
+
+        <div class="col-sm-6" style="background-color:lavenderblush;">
             <h1>Notes</h1>
             <hr>
             {% for note in notes %}
                 <a href="/{{note.id}}"><h3>{{note.title}}<br></h3></a>
                 <h4>{{note.author}}<br><br></h4>
             {% endfor %}
+        </div>
+
+        <div class="col-sm-4" style="background-color:lavenderblush;">
+            <a href="/register/"><button type="button" onclick=>Register</button></a>
         </div>
     </div>
 </div>
